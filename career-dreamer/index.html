@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Descubra carreiras em tecnologia que combinam com seus hobbies e interesses."
+    />
+    <title>Career Dreamer — Descubra sua carreira em tecnologia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/config.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__content">
+        <a class="brand" href="index.html" aria-label="Career Dreamer — início">
+          <span class="brand__icon" aria-hidden="true">&lt;/&gt;</span>
+          <span>
+            <strong>Career Dreamer</strong>
+            <small>encontre seu caminho</small>
+          </span>
+        </a>
+        <a class="header__link" href="#como-funciona">
+          Como funciona
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__circle" aria-hidden="true"></div>
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <span class="eyebrow">
+              <i aria-hidden="true"></i>
+              Seu futuro não precisa ser no escuro
+            </span>
+            <h1>Descubra seu lugar no mundo da <em>tecnologia.</em></h1>
+            <p class="hero__description">
+              Conta o que você gosta de fazer e o que desperta sua curiosidade. Em poucos segundos,
+              a gente transforma isso em caminhos de carreira que fazem sentido para você.
+            </p>
+            <ul class="benefits" aria-label="Benefícios">
+              <li><span aria-hidden="true">✓</span> Sem resposta certa</li>
+              <li><span aria-hidden="true">✓</span> Direto ao ponto</li>
+              <li><span aria-hidden="true">✓</span> Feito para iniciantes</li>
+            </ul>
+          </div>
+
+          <div class="form-wrap" id="descobrir">
+            <div class="form-wrap__back" aria-hidden="true"></div>
+            <form id="form-perfil" class="profile-form" novalidate>
+              <div class="form-heading">
+                <div>
+                  <p class="overline">Seu perfil</p>
+                  <h2>Bora descobrir?</h2>
+                </div>
+                <span class="compass" aria-hidden="true">◇</span>
+              </div>
+
+              <label for="nome">
+                <span>Como você se chama?</span>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  placeholder="Seu nome"
+                  required
+                  minlength="2"
+                  maxlength="60"
+                  autocomplete="name"
+                  aria-describedby="erro-nome"
+                />
+                <p id="erro-nome" class="mensagem-erro" role="alert" hidden></p>
+              </label>
+
+              <label for="hobbies">
+                <span>O que você curte fazer?</span>
+                <input
+                  type="text"
+                  id="hobbies"
+                  name="hobbies"
+                  placeholder="Ex: games, desenhar, organizar playlists"
+                  required
+                  aria-describedby="dica-hobbies erro-hobbies"
+                />
+                <small id="dica-hobbies">Pode separar cada hobby com vírgula.</small>
+                <p id="erro-hobbies" class="mensagem-erro" role="alert" hidden></p>
+              </label>
+
+              <label for="interesses">
+                <span>O que desperta sua curiosidade?</span>
+                <input
+                  type="text"
+                  id="interesses"
+                  name="interesses"
+                  placeholder="Ex: inteligência artificial, apps, design"
+                  required
+                  aria-describedby="dica-interesses erro-interesses"
+                />
+                <small id="dica-interesses">Vale tudo que faz você querer saber mais.</small>
+                <p id="erro-interesses" class="mensagem-erro" role="alert" hidden></p>
+              </label>
+
+              <button id="btn-enviar" class="primary-button" type="submit">
+                <span>Descobrir minha carreira</span>
+                <span aria-hidden="true">→</span>
+              </button>
+              <p class="form-note">Leva menos de 1 minuto. Sem cadastro, sem enrolação.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="how" id="como-funciona">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="overline overline--blue">Como funciona</p>
+              <h2>Da curiosidade ao primeiro passo.</h2>
+            </div>
+            <p>Nada de teste vocacional com cara de prova. Aqui você só precisa ser você.</p>
+          </div>
+
+          <ol class="steps">
+            <li class="step">
+              <span class="step__number" aria-hidden="true">01</span>
+              <span class="step__icon" aria-hidden="true">◎</span>
+              <h3>Conta um pouco sobre você</h3>
+              <p>Seu nome, o que curte fazer e os assuntos que prendem sua atenção.</p>
+            </li>
+
+            <li class="step">
+              <span class="step__number" aria-hidden="true">02</span>
+              <span class="step__icon" aria-hidden="true">✦</span>
+              <h3>A gente conecta os pontos</h3>
+              <p>Suas respostas são cruzadas com perfis e habilidades de carreiras tech.</p>
+            </li>
+
+            <li class="step">
+              <span class="step__number" aria-hidden="true">03</span>
+              <span class="step__icon" aria-hidden="true">⌁</span>
+              <h3>Você ganha um mapa</h3>
+              <p>Veja as áreas que mais combinam e por onde começar a estudar.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="example">
+        <div class="container example__content">
+          <div>
+            <p class="overline">Quer espiar antes?</p>
+            <h2>Veja como fica um mapa de carreira pronto.</h2>
+          </div>
+          <a class="secondary-button" href="resultado.html?exemplo">
+            Ver resultado de exemplo
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer__content">
+        <strong><span aria-hidden="true">&lt;/&gt;</span> Career Dreamer</strong>
+        <p>
+          Projeto acadêmico — Análise e Desenvolvimento de Sistemas.
+          <a class="footer__link" href="resultado.html?exemplo">Ver um resultado de exemplo</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Modal de aviso ("Tente mais tarde" - Issue #11 e #12) -->
+    <dialog id="modal-aviso" class="modal-dialog" aria-labelledby="modal-titulo" aria-describedby="modal-mensagem">
+      <div class="result-card">
+        <div class="result-card__header">
+          <div>
+            <span class="result-label">Aviso do sistema</span>
+            <h2 id="modal-titulo">Tente mais tarde</h2>
+          </div>
+          <form method="dialog">
+            <button class="close-button" type="submit" aria-label="Fechar aviso">×</button>
+          </form>
+        </div>
+        <p id="modal-mensagem" class="result-intro">
+          O serviço de análise ainda não está disponível no momento. Por favor, tente novamente mais tarde.
+        </p>
+        <form method="dialog">
+          <button class="result-button" type="submit">
+            Entendi
+            <span aria-hidden="true">→</span>
+          </button>
+        </form>
+      </div>
+    </dialog>
+  </body>
+</html>

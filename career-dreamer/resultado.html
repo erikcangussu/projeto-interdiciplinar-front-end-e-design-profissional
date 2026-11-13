@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Seu perfil profissional e as carreiras em tecnologia recomendadas para você."
+    />
+    <title>Seu perfil — Career Dreamer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/config.js" defer></script>
+    <script src="js/dados-exemplo.js" defer></script>
+    <script src="js/resultado.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__content">
+        <a class="brand" href="index.html" aria-label="Career Dreamer — início">
+          <span class="brand__icon" aria-hidden="true">&lt;/&gt;</span>
+          <span>
+            <strong>Career Dreamer</strong>
+            <small>encontre seu caminho</small>
+          </span>
+        </a>
+        <a class="header__link" href="index.html">
+          <span aria-hidden="true">←</span>
+          Novo mapeamento
+        </a>
+      </div>
+    </header>
+
+    <main class="container pagina-resultado">
+      <section id="resultado" aria-labelledby="titulo-resultado" hidden>
+        <div class="resultado-cabecalho">
+          <span class="result-label">Mapa de carreira</span>
+          <h1 id="titulo-resultado">Perfil de <span id="nome-usuario"></span></h1>
+          <p id="sintese" class="sintese"></p>
+        </div>
+
+        <h2 class="resultado-subtitulo">Carreiras recomendadas</h2>
+        <ol id="lista-carreiras" class="lista-carreiras"></ol>
+      </section>
+
+      <section id="sem-resultado" class="vazio" aria-labelledby="titulo-vazio" hidden>
+        <span class="result-label">Sem dados</span>
+        <h1 id="titulo-vazio">Nenhum perfil para mostrar</h1>
+        <p>Preencha o formulário na página inicial para gerar suas recomendações de carreira.</p>
+        <a class="result-button" href="index.html">
+          Preencher formulário
+          <span aria-hidden="true">→</span>
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer__content">
+        <strong><span aria-hidden="true">&lt;/&gt;</span> Career Dreamer</strong>
+        <p>Projeto acadêmico — Análise e Desenvolvimento de Sistemas.</p>
+      </div>
+    </footer>
+
+    <template id="modelo-carreira">
+      <li class="result-card carreira-item">
+        <article>
+          <span class="carreira__selo" hidden>★ Melhor combinação</span>
+
+          <div class="match">
+            <p>Compatibilidade</p>
+            <div class="match__content">
+              <div>
+                <h3 class="carreira__titulo"></h3>
+                <span class="carreira__resumo"></span>
+              </div>
+              <strong class="carreira__percentual"></strong>
+            </div>
+            <div class="barra" aria-hidden="true"><span class="barra__nivel"></span></div>
+          </div>
+
+          <div class="roadmap">
+            <h4>Competências-chave</h4>
+            <ul class="chips"></ul>
+          </div>
+
+          <div class="roadmap">
+            <h4>Comece por aqui (Roteiro de estudos)</h4>
+            <ol class="roteiro"></ol>
+          </div>
+        </article>
+      </li>
+    </template>
+  </body>
+</html>
